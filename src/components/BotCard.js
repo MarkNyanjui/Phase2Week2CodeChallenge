@@ -9,7 +9,8 @@ const botTypeClasses = {
     Captain: "icon star"
 }
 
-function BotCard({ bot, clickEvent, deleteBot }) {
+function BotCard(props) {
+    const { bot, clickEvent, deleteBot } = props;
 
     const handleClick = (e) => {
         console.log("handleClick has been pressed")
@@ -31,30 +32,30 @@ function BotCard({ bot, clickEvent, deleteBot }) {
                 onClick={handleClick}
             >
                 <div className='image'>
-                    <img src={bot.avatar_url} alt={bot.name} />
+                    <img src={props.bot.avatar_url} alt={props.bot.name} />
                 </div>
                 <div className='content'>
                     <div className='header'>
-                        {bot.name}
-                        <i className={botTypeClasses[bot.bot_class]} />
+                        {props.bot.name}
+                        <i className={botTypeClasses[props.bot.bot_class]} />
                     </div>
                     <div className='meta'>
-                        <small>{bot.catchphrase}</small>
+                        <small>{props.bot.catchphrase}</small>
                     </div>
                     <div className='extra content'>
                         <span>
                             <i className='icon heartbeat' />
-                            Health: {bot.health}
+                            Health: {props.bot.health}
                         </span>
 
                         <span>
                             <i className='icon lightning' />
-                            Damage: {bot.damage}
+                            Damage: {props.bot.damage}
                         </span>
 
                         <span>
                             <i className='icon shield' />
-                            Armor: {bot.armor}
+                            Armor: {props.bot.armor}
                         </span>
 
                         <span>

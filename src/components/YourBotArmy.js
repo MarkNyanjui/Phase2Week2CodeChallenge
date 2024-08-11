@@ -1,13 +1,13 @@
 import React from 'react'
 import BotCard from './BotCard'
 
-function YourBotArmy({ bots, removeBot, deleteBot }) {
-    const displayBotCards = bots.map((bot) => (
+function YourBotArmy( props )  {
+    const displayBotCards = props.bots.map((bot) => (
           <BotCard
             key={bot.id}
             bot={bot}
-            clickEvent={removeBot}
-            deleteBot={deleteBot}
+            clickEvent={props.removeBot}
+            deleteBot={props.deleteBot}
           />
         ));
 
