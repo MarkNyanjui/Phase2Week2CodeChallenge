@@ -6,7 +6,7 @@ function YourBotArmy( props )  {
           <BotCard
             key={bot.id}
             bot={bot}
-            clickEvent={props.removeBot}
+            clickEvent={props.clickEvent}
             deleteBot={props.deleteBot}
           />
         ));

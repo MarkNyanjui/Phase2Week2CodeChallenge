@@ -9,19 +9,27 @@ const botTypeClasses = {
     Captain: "icon star"
 }
 
-function BotCard(props) {
-    const { bot, clickEvent, deleteBot } = props;
+const BotCard = props => {
+    const { bot, clickEvent , deleteBot } = props;
 
-    const handleClick = (e) => {
+    function handleClick(e) {
         console.log("handleClick has been pressed")
         e.stopPropagation()
-        clickEvent(bot)
+        if (typeof clickEvent === 'function') {
+            clickEvent(bot)
+        } else {
+            console.error('No click event provided')
+        }
     }
 
-    const handleDischarge = (e) => {
+    function handleDischarge(e) {
         console.log("Red X Clicked")
         e.stopPropagation()
-        deleteBot(bot)
+        if (typeof deleteBot === 'function') {
+            deleteBot(bot)
+        } else {
+            console.error('No delete event provided')
+        }
     }
 
     return (

@@ -37,7 +37,7 @@ function BotsPage() {
 
   const removeFromArmy = (bot) => {
     const newBotArmy = yourBotArmy.filter(card => card.id !== bot.id);
-    const armyClasses = newArmy.map(bot => bot.bot_class)
+    const armyClasses = newBotArmy.map(bot => bot.bot_class)
     const newCollection = botCollection.filter(card => !armyClasses.includes(bot.bot_class));
     console.log('newCollection', newCollection)
 
@@ -48,11 +48,11 @@ function BotsPage() {
   const deleteBotPermanently = (bot) => {
     const newBotCollection = botCollection.filter(card => card !== bot);
     const newFilteredCollection = filteredCollection.filter(card => card !== bot);
-    const newArmy = yourBotArmy.filter(card => card !== bot)
+    const newBotArmy = yourBotArmy.filter(card => card !== bot)
 
     setBotCollection(newBotCollection);
     setFilteredCollection(newFilteredCollection);
-    setYourBotArmy(newArmy);
+    setYourBotArmy(newBotArmy);
 
     fetch(`http://localhost:3000/bots/${bot.id}`,
       {
