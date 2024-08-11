@@ -19,7 +19,7 @@ function BotCard(props) {
     }
 
     const handleDischarge = (e) => {
-        console.log("handleDischarge has been pressed")
+        console.log("Red X Clicked")
         e.stopPropagation()
         deleteBot(bot)
     }
@@ -39,7 +39,7 @@ function BotCard(props) {
                         {props.bot.name}
                         <i className={botTypeClasses[props.bot.bot_class]} />
                     </div>
-                    <div className='meta'>
+                    <div className='meta text-wrap'>
                         <small>{props.bot.catchphrase}</small>
                     </div>
                     <div className='extra content'>
@@ -59,8 +59,8 @@ function BotCard(props) {
                         </span>
 
                         <span>
-                            <div className='ui centre aligned'>
-                                <button className='ui button red'
+                            <div className='ui centre aligned segment basic'>
+                                <button className='ui mini red button'
                                     onClick={handleDischarge}
                                 >
                                     X

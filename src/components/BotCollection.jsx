@@ -17,8 +17,8 @@ function BotCollection({ bots, enlistBot, deleteBot }) {
         ));
 
     return (
-        <div>
-            <div className='ui grid container'>
+        <div className='ui four column grid'>
+            <div className='row'>
                 {displayBotCards}
             </div>
         </div>

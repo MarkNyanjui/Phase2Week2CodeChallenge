@@ -12,10 +12,12 @@ function YourBotArmy( props )  {
         ));
 
     return (
-        <div>
-            <div className='ui grid container'>
+        <div className='ui segment inverted olovr bot-army'>
+            <div className='ui five column grid'>
+                <div className='row bot-army-row'>
                 {displayBotCards}
             </div>
+        </div>
         </div>
     )
 }
