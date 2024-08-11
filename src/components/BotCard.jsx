@@ -27,7 +27,7 @@ function BotCard(props) {
     return (
         <div className='ui-column'>
             <div
-                classname="ui card"
+                className="ui card"
                 key={props.bot.id}
                 onClick={handleClick}
             >

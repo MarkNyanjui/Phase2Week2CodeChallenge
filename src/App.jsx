@@ -1,9 +1,13 @@
 import React from 'react'
+import BotsPage from './components/BotsPage'
 import './App.css'
 
 function App() {
   return (
-    <div>App</div>
+    <div className='App'>
+      <BotsPage />
+      </div>
+
   )}
 
 export default App
