@@ -63,7 +63,7 @@ function BotCard(props) {
                                 <button className='ui button red'
                                     onClick={handleDischarge}
                                 >
-                                    Discharge
+                                    X
                                 </button>
                             </div>
                         </span>
