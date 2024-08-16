@@ -69,7 +69,7 @@ function BotsPage() {
   const displayBotCollection = () => {
     setCollectionVisible(true);
   }
-console.log("Filtered collection:", filteredCollection);
+  console.log("Filtered collection:", filteredCollection);
 
   return (
     <div>
@@ -82,13 +82,13 @@ console.log("Filtered collection:", filteredCollection);
         <p>Loading Bots...</p>
 
       ) : collectionVisible ? (
-       <BotCollection
+        <BotCollection
           bots={filteredCollection}
           clickEvent={enlistBot}
           deleteBot={deleteBotPermanently}
         />
-      ) : ( 
-      <BotSpecs
+      ) : (
+        <BotSpecs
           bot={botSpecs}
           back={displayBotCollection}
           enlistBot={enlistBot}
