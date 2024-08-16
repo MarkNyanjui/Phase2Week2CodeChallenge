@@ -9,7 +9,7 @@ This project was created by Mark Nyanjui. (https://github.com/MarkNyanjui)
  
 ## Instructions
 
-For this project, you’ll be building out a React application that displays a list of available bots, among other features. Try your best to find the right places to insert code into the established code base.
+For this project, you’ll build a React application that displays a list of available bots, among other features. 
 
 # Installation Requirements
 Git
@@ -54,6 +54,8 @@ As a user, I should be able to:
 
 # License
 The content of this site is licensed under the MIT license Copyright (c) 2024.
+
+
 
 
 
